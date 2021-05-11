@@ -1,0 +1,24 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    // Write a Java program that displays a random word consisting of five letters.
+    
+    String random_word;
+    String alphabet = "abcdefghijklmnopqrstuvwxyz";
+    
+    random_word = "" + alphabet.charAt((int)(Math.random() * alphabet.length())) +
+        alphabet.charAt((int)(Math.random() * alphabet.length())) +
+        alphabet.charAt((int)(Math.random() * alphabet.length())) +
+        alphabet.charAt((int)(Math.random() * alphabet.length())) +
+        alphabet.charAt((int)(Math.random() * alphabet.length()));
+    
+    System.out.println(random_word);
+        
+   }
+}
