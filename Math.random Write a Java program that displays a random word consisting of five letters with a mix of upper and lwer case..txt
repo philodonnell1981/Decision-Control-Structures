@@ -1,0 +1,28 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    /*
+     * Write a Java program that creates and displays 
+     * a random word consisting of five letters. 
+     * The first letter & 4th must be a capital letters.
+     */
+    
+    String random_word;
+    String alphabet = "abcdefghijklmnopqrstuvwxyz";
+    
+    random_word = ("" + alphabet.charAt((int)(Math.random() * alphabet.length()))).toUpperCase() +
+        alphabet.charAt((int)(Math.random() * alphabet.length())) +
+        alphabet.charAt((int)(Math.random() * alphabet.length())) +
+        ("" + alphabet.charAt((int)(Math.random() * alphabet.length()))).toUpperCase() +
+        alphabet.charAt((int)(Math.random() * alphabet.length()));
+    
+    System.out.println(random_word);
+        
+   }
+}
