@@ -1,0 +1,29 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    /* 14.3-3 Write a Java program that prompts the user 
+     * to enter his or her last name and then creates 
+     * a login ID from the first four letters of the name 
+     * (in lowercase) and a three-digit random integer.
+     */
+    
+    String  surname, loginID;
+    int random_int;
+    
+    System.out.print("Enter your surname: ");
+    surname = cin.nextLine();
+    
+    random_int = ((int)(Math.random() * 900) + 100); // generate random number between 100 & 999 (999 minus 100 plus 1) 
+    loginID = surname.substring(0, 4).toLowerCase() + random_int;
+    
+    System.out.println(loginID);
+    
+    
+   }
+}
