@@ -1,0 +1,52 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    /*
+     * Write a Java program that assigns a random secret 
+     * integer between 1 and 100 to a variable and then 
+     * prompts the user to guess the number. If the integer 
+     * given is less than the secret one, a message 
+     * “Your guess is smaller than my secret number. 
+     * Try again.” must be displayed. If the integer 
+     * given is greater than the secret one, a message 
+     * “Your guess is bigger than my secret number. 
+     * Try again.” must be displayed. This process must 
+     * repeat until the user finally finds the secret number. 
+     * Then, a message “You found it!” must be displayed, 
+     * as well as the total number of the user's attempts.
+     */
+    
+    int secret_num, guess, attempts;
+    
+    secret_num = ((int)(Math.random() * 100) + 1);
+    
+    System.out.print("Enter a guess between 1 & 100: ");
+    guess = Integer.parseInt(cin.nextLine());
+    attempts = 1;
+    
+    while (guess != secret_num) {
+      if (guess < secret_num) {
+        System.out.println("Your guess is smaller than my secret number, guess again: ");
+      }
+      else {
+        System.out.println("Your guess is bigger than my secret number, guess again: ");
+      }
+      attempts++;
+      System.out.print("Enter a guess between 1 & 100: ");
+      guess = Integer.parseInt(cin.nextLine());
+    }
+    
+    System.out.println("You guessed it in " + attempts + " attempts");
+   
+    
+    
+    
+    
+   }
+}
