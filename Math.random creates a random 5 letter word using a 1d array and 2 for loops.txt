@@ -1,0 +1,29 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+  static final int WORDS = 5;
+
+  public static void main(String[] args) {
+    /*
+     * Write a Java program that displays a random word consisting of five letters.    
+     */
+    
+    int i;
+    String alphabet = "abcdefghijklmnopqrstuvwxyz";
+    
+    String[] word = new String[WORDS];
+    for (i = 0; i <= WORDS - 1; i++) {
+      word[i] = "" + alphabet.charAt((int)(Math.random() * alphabet.length()));
+    }
+    
+    for (i = 0; i <= WORDS - 1; i++) {
+      System.out.print(word[i]);
+    }
+    
+    
+   }
+}
