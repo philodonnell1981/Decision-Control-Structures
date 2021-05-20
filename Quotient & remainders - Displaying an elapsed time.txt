@@ -1,0 +1,38 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+    int time, days, hours, mins, secs, r;
+    /*
+     * Write a Java program that prompts the user to enter an 
+     * integer that represents an elapsed time in seconds and 
+     * then displays it in the format “DD days HH hours MM minutes 
+     * and SS seconds”. For example if the user enters the number 700005, 
+     * the message “8 days 2 hours 26 minutes and 45 seconds” must be displayed.
+     */
+    
+    System.out.print("Enter a time in seconds: "); 
+    time = Integer.parseInt(cin.nextLine()); // eg user inputs 700005
+    
+    // 60 seconds in 1 minute x 60 minutes = 3600 seconds in 1 hour x 24 = 86,400 seconds in 1 day
+    
+    days = (int) time / 86400; // 700005 DIV 86400 = 8 days
+    r = time % 86400; // 700005 MOD 86400 = 8805 seconds remaining
+    hours = (int) (r / 3600); // 8805 DIV 3600 = 2 HOURS
+    r %= 3600; // 8805 MOD 3600 = 1605 seconds remaining
+    mins = (int) (r / 60); // 1605 DIV 60 = 26
+    secs = r % 60; // 1605 MOD 60 = 45 seconds remaining
+    
+    System.out.print(days + " days " + hours + " hours " + mins + " minutes " + secs + " seconds");
+    
+    
+    
+    
+   }
+}
