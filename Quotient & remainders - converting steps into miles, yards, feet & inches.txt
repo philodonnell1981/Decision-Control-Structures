@@ -1,0 +1,48 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+    /*
+     * A robot arrives on the moon in order to perform 
+     * some experiments. Each of the robot's steps is 25 
+     * inches long. Write a Java program that prompts the 
+     * user to enter the number of steps the robot made and 
+     * then calculates and displays the distance travelled 
+     * in miles, feet, yards, and inches. 
+     * For example, if the distance travelled is 100000 inches, 
+     * the program must display the message “1 mile( s), 
+     * 1017 yard( s), 2 foot/ feet, and 4 inch( es)”. 
+     * It is given that
+     * 1 mile = 63360 inches
+     * 1 yard = 36 inches
+     * 1 foot = 12 inches
+     */
+    
+    int steps, miles, yards, feet, inches, r;
+    
+    System.out.println("Enter number of steps taken: ");
+    steps = Integer.parseInt(cin.nextLine()); // eg user inputs 100000
+    
+    miles = (int)(steps / 63360); // 100000 div 63360 = 1
+    r = steps % 63360; // remaining inches = 100000 % 63360 = 36640
+    yards = (int) (r / 36); // yards = 36640 div 36 inches = 1017 yards
+    r %= 36; // remaining inches = 36640 % 36 = 28
+    feet = (int) (r / 12); // 28 div 12 = 2
+    inches = r % 12; // 28 % 4 = 4
+    
+    System.out.print(miles + " mile(s), " + yards + " yard(s), " + feet + " foot/feet, " + inches + " inches.");
+    
+    
+    
+    
+    
+    
+    
+   }
+}
