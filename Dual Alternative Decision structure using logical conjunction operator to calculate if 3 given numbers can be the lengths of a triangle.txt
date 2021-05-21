@@ -1,0 +1,39 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+    /*
+     * Write a Java program that lets the user enter three numbers, 
+     * and then displays a message indicating whether the given numbers 
+     * can be lengths of the three sides of a triangle; 
+     * it must display “Given numbers cannot be lengths of the three 
+     * sides of a triangle” otherwise. 
+     * Assume that the user enters valid values.
+     */
+    
+    int a, b, c;
+    
+    System.out.println("Enter the first number: ");
+    a = Integer.parseInt(cin.nextLine());
+    
+    System.out.println("Enter the second number: ");
+    b = Integer.parseInt(cin.nextLine());
+    
+    System.out.println("Enter the third number: ");
+    c = Integer.parseInt(cin.nextLine());
+    
+    if (a < b + c && b < a + c && c < a + b) {
+      System.out.println("Given numbers can be lengths of a triangle.");
+    }
+    else {
+      System.out.println("Given numbers cannot be lengths of a triangle.");
+    }
+    
+   }
+}
