@@ -1,0 +1,47 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+  static final int TAXES = 30;
+
+  public static void main(String[] args) {
+    
+    /*
+     * Gross pay depends on the pay rate and the total number of hours 
+     * worked per week. However, if someone works more than 40 hours, 
+     * he or she gets paid double for all hours worked over 40. 
+     * Design a flowchart and write the corresponding Java program 
+     * that lets the user enter the pay rate and hours worked and then 
+     * calculates and displays net pay. 
+     * Net pay is the amount of pay that is actually paid to the employee 
+     * after any deductions. Deductions include taxes, health insurance, 
+     * retirement plans, on so on. Assume a total deduction of 30% 
+     * and that the user enters valid values.
+     */
+    
+    double pph, netPay, hoursWorked, grossPay, overTime;
+    
+    System.out.print("Enter pay rate per hour: ");
+    pph = Double.parseDouble(cin.nextLine());
+    
+    System.out.print("Enter number of hours worked: ");
+    hoursWorked = Double.parseDouble(cin.nextLine());
+    
+    if (hoursWorked > 40) {
+      grossPay = pph * 40;
+      overTime = (hoursWorked - 40) * pph * 2;
+      grossPay += overTime;
+    }
+    else {
+      grossPay = pph * hoursWorked;
+    }
+    
+    netPay = grossPay - grossPay * TAXES / 100;
+    
+    System.out.println(netPay);
+    
+   }
+}
