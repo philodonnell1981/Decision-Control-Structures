@@ -1,0 +1,59 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+    /*
+     * Write a Java program that displays the following menu: 
+     * 1. Convert Miles to Yards 
+     * 2. Convert Miles to Feet 
+     * 3. Convert Miles to Inches 
+     * It then prompts the user to enter a choice (of 1, 2, or 3) and a distance in miles. 
+     * Then, it calculates and displays the required value. 
+     * Assume that the user enters a valid value for the distance. 
+     * However, if the choice entered is invalid, an error message must be displayed. 
+     * It is given that 
+     * 1 mile = 1760 yards 
+     * 1 mile = 5280 feet
+     * 1 mile = 63360 inches
+     */
+    
+    int choice;
+    double miles, yards, feet, inches;
+    
+    System.out.println("1. Convert Miles to Yards");
+    System.out.println("2. Convert Miles to Feet");
+    System.out.println("3. Convert Miles to Inches");
+    
+    System.out.println("Enter a choice (of 1, 2, or 3): ");
+    choice = Integer.parseInt(cin.nextLine());
+      
+    switch (choice) {
+    case 1:
+      System.out.print("Enter a distance in miles to convert to yards: ");
+      miles = Double.parseDouble(cin.nextLine());
+      yards = miles * 1760;
+      System.out.println(yards + " yards");
+      break;
+    case 2:
+      System.out.print("Enter a distance in miles to convert to feet: ");
+      miles = Double.parseDouble(cin.nextLine());
+      feet = miles * 5280;
+      System.out.println(feet + " feet");
+      break;
+    case 3: 
+      System.out.print("Enter a distance in miles to convert to inches: ");
+      miles = Double.parseDouble(cin.nextLine());
+      inches = miles * 63360;
+      System.out.println(inches + " inches");
+      break;
+      default:
+        System.out.println("Invalid entry");
+    }
+       
+   }
