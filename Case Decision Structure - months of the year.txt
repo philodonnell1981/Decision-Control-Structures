@@ -1,0 +1,66 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+    /*
+     * Write a Java program that prompts the user to enter the name of a month, 
+     * and then displays the corresponding number (1 for January, 2 for February, and so on). 
+     * If the value entered is invalid, an error message must be displayed.
+     */
+    
+    String month;
+    
+    System.out.print("Enter the name of a month: ");
+    month = cin.nextLine();
+    
+    switch (month) {
+    case "Jan":
+      System.out.println("1");
+      break;
+    case "Feb":
+      System.out.print("2");
+      break;
+    case "Mar":
+      System.out.print("3");
+      break;
+    case "Apr":
+      System.out.print("4");
+      break;
+    case "May":
+      System.out.print("5");
+      break;
+    case "June":
+      System.out.print("6");
+      break;
+    case "July":
+      System.out.println("7");
+    break;
+    case "Aug":
+      System.out.print("8");
+      break;
+    case "Sep":
+      System.out.print("9");
+      break;
+    case "Oct":
+      System.out.print("10");
+      break;
+    case "Nov":
+      System.out.print("11");
+      break;
+    case "Dec":
+      System.out.print("12");
+      break;
+      default:
+        System.out.print("Invalid Entry");
+    }
+    
+   
+       
+   }
+}
