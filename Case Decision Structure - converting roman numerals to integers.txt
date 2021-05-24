@@ -1,0 +1,60 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+    /*
+     * Write a Java program that prompts the user to enter a 
+     * Roman numeral between I and X, and then displays the 
+     * corresponding number. However, if the choice entered is invalid, 
+     * an error message must be displayed.
+     */
+    
+    String romanNumeral;
+    
+    System.out.print("Enter a roman numeral between I and X: ");
+    romanNumeral = cin.nextLine();
+    
+    switch (romanNumeral) {
+    case "I":
+      System.out.println("1");
+      break;
+    case "II":
+      System.out.print("2");
+      break;
+    case "III":
+      System.out.print("3");
+      break;
+    case "IV":
+      System.out.print("4");
+      break;
+    case "V":
+      System.out.print("5");
+      break;
+    case "VI":
+      System.out.print("6");
+      break;
+    case "VII":
+      System.out.print("7");
+      break;
+    case "VIII":
+      System.out.print("8");
+      break;
+    case "IX":
+      System.out.print("9");
+      break;
+    case "X":
+      System.out.print("10");
+      break;
+      default:
+        System.out.println("Error");
+    }
+    
+ 
+   }
+}
