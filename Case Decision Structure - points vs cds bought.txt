@@ -1,0 +1,44 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+    /*
+     * An online CD shop awards points to its customers based on the 
+     * total number of audio CDs purchased each month. 
+     * The points are awarded as follows: 
+     * If the customer purchases 1 CD, he or she is awarded 3 points.
+     * If the customer purchases 2 CDs, he or she is awarded 10 points. 
+     * If the customer purchases 3 CDs, he or she is awarded 20 points. 
+     * If the customer purchases 4 CDs or more, he or she is awarded 45 points. 
+     * Write a Java program that prompts the user to enter the total number of CDs 
+     * that he or she has purchased in a month, and then displays the number of points awarded. 
+     * Assume that the user enters a valid value.
+     */
+    
+    int cds;
+    
+    System.out.print("Enter the total number of CDs that you purchased within a month: ");
+    cds = Integer.parseInt(cin.nextLine());
+    
+    switch (cds) {
+    case 1:
+      System.out.println("3 points awarded");
+      break;
+    case 2:
+      System.out.println("10 points awarded");
+      break;
+    case 3:
+      System.out.println("20 points awarded");
+      break;
+      default:
+      System.out.println("45 points awarded");
+    }
+ 
+   }
+}
