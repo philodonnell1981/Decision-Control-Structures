@@ -1,0 +1,67 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+   /*
+    * The Beaufort 15 scale is an empirical measure that relates wind speed to 
+    * observed conditions on land or at sea. Write a Java program that prompts 
+    * the user to enter the Beaufort number, and then displays the corresponding 
+    * description from the following table. 
+    * However, if the number entered is invalid, 
+    * an error message must be displayed. 
+    */
+    
+    int beaufortNum;
+    
+    System.out.print("Enter the Beaufort number: ");
+    beaufortNum = Integer.parseInt(cin.nextLine());
+    
+    switch (beaufortNum) {
+    case 1:
+      System.out.println("Calm");
+      break;
+    case 2:
+      System.out.println("Light air");
+      break;
+    case 3:
+      System.out.println("Light breeze");
+      break;
+    case 4:
+      System.out.println("Moderate breeze");
+      break;
+    case 5:
+      System.out.println("Fresh breeze");
+      break;
+    case 6:
+      System.out.println("Strong breeze");
+      break;
+    case 7:
+      System.out.println("Moderate gale");
+      break;
+    case 8:
+      System.out.println("Gale");
+      break;
+    case 9:
+      System.out.println("Strong gale");
+      break;
+    case 10:
+      System.out.println("Storm");
+      break;
+    case 11:
+      System.out.println("Violent storm");
+      break;
+    case 12:
+      System.out.println("Hurricaine force");
+      break;
+      default:
+        System.out.println("Error - invalid beaufort number");
+    }
+    
+   }
+}
