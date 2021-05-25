@@ -1,0 +1,38 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+   /*
+    * Write a Java program that prompts the user to enter his or her name, 
+    * and then displays “Good morning NN” or “Good evening NN” or “Good night NN”, 
+    * where NN is the name of the user. 
+    * The message to be displayed must be chosen randomly.
+    */
+    
+    String name;
+    int i;
+    
+    System.out.print("Enter your name: ");
+    name = cin.nextLine();
+    
+    i = (int)(Math.random() * 3);
+    
+    switch (i) {
+    case 0:
+      System.out.println("Good morning " + name);
+      break;
+    case 1:
+      System.out.println("Good evening " + name);
+      break;
+    case 2:
+      System.out.println("Good night " + name);
+    }
+ 
+   }
+}
