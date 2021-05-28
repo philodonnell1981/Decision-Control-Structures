@@ -1,0 +1,49 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    /*
+     * Write a Java program that prompts the user to enter two values, one for temperature and one for wind speed. 
+     * If the temperature is above 75 degrees Fahrenheit, the day is considered hot, otherwise it is cold. 
+     * If the wind speed is above 12 miles per hour, the day is considered windy, otherwise it is not windy. 
+     * The program must display one single message, depending on values given. 
+     * For example, if a user enters 60 for temperature and 10 for wind speed, the program must display 
+     * “The day is cold and not windy”. Assume that the user enters valid values.
+     */
+    
+    double temperature, windSpeed;
+    String heat, wind; 
+    
+    System.out.print("Enter the temperature: ");
+    temperature = Double.parseDouble(cin.nextLine());
+    System.out.print("Enter the wind speed: ");
+    windSpeed = Double.parseDouble(cin.nextLine());
+    
+    if (temperature > 75) {
+      heat = "hot";
+    }
+    else {
+      heat = "cold";
+    }
+    
+    if (windSpeed > 12) {
+      wind = "windy";
+    }
+    else {
+      wind = "not windy";
+    }
+    
+    System.out.println("The day is " + heat + " and " + wind + ".");
+    
+     
+    
+    
+    
+    
+   }
+}
