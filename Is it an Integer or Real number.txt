@@ -1,0 +1,30 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+   /*
+    * Write a Java program that prompts the user to enter a number 
+    * and then displays a message indicating whether the data type 
+    * of this number is integer or real.
+    */
+    
+    double x;
+    
+    System.out.println("Enter a number: ");
+    x = Double.parseDouble(cin.nextLine());
+    
+    if (x == (int)x) {
+      System.out.println("Integer");
+    }
+    else {
+      System.out.println("Real");
+    }
+   
+   }
+}
