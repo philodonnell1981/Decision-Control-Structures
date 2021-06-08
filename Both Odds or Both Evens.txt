@@ -1,0 +1,35 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+   /*
+    * Write a Java program that prompts the user to enter two integers 
+    * and then displays a message indicating whether both numbers are odd or both are even; 
+    * otherwise the message “Nothing special” must be displayed.
+    */
+    
+    int a, b;
+    
+    System.out.print("Enter the first number: ");
+    a = Integer.parseInt(cin.nextLine());
+    System.out.print("Enter the second number: ");
+    b = Integer.parseInt(cin.nextLine());
+    
+    if (a % 2 == 1 && b % 2 == 1) {
+      System.out.println("Both odd");
+    }
+    else if (a % 2 == 0 && b % 2 == 0) {
+      System.out.println("Both even");
+    }
+    else {
+      System.out.println("Nothing special");
+    }
+   
+   }
+}
