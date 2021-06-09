@@ -1,0 +1,49 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+   /*
+    * In a toll gate, there is an automatic system that recognizes whether the 
+    * passing vehicle is a motorcycle, a car, or a truck. 
+    * Write a Java program that lets the user enter the type of the vehicle 
+    * (M for motorcycle, C for car, and T for truck) and then displays the corresponding 
+    * amount of money the driver must pay according to the following table. 
+    * Vehicle Type    Amount to Pay 
+    * Motorcycle      $ 1 Car 
+    * Car             $ 2 
+    * Truck           $ 4 
+    * The program must function properly even when characters are given in lowercase. 
+    * For example, the program must function properly either for “M” or “m”. 
+    * However, if the user enters a character other than M, C, or T, an error message must be displayed.
+    */
+    
+    String vehicle;
+    
+    System.out.println("Enter vehicle type: (M for motorcycle, C for car, and T for truck)");
+    vehicle = cin.nextLine().toUpperCase();
+    
+    if (!(vehicle).equals("M") && !(vehicle).equals("C") && !(vehicle).equals("T")) {
+      System.out.println("Error!");
+    }
+    else {
+      switch(vehicle) {
+      case "M":
+        System.out.println("$1");
+        break;
+      case "C":
+        System.out.println("$2");
+        break;
+      case "T":
+        System.out.println("$4");
+    }
+    }
+    
+   
+   }
+}
