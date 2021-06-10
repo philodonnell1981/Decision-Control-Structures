@@ -1,0 +1,35 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+   /*
+    * Design a flowchart and write the corresponding Java program 
+    * that prompts the user to enter an integer, and then displays 
+    * a message indicating whether this number is even; 
+    * it must display “Odd” otherwise. Moreover, individual error 
+    * messages must be displayed when the user enters a negative 
+    * value or a float.
+    */
+    
+    double x;
+    
+    x = Double.parseDouble(cin.nextLine());
+    
+    if (x < 0 || x != (int) x) {
+      System.out.println("Invalid Entry");
+    }
+    else if (x % 3 == 0 & x % 4 == 0) {
+      System.out.println(x + " is divisible for 3 and 4");
+    }
+    else {
+      System.out.println(x + " is not what you are looking for");
+    }
+   
+   }
+}
