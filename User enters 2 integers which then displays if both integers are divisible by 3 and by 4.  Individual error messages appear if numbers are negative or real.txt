@@ -1,0 +1,49 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+   /*
+    * Design a flowchart and write the corresponding Java program that 
+    * lets the user enter two integers and then displays a message indicating 
+    * whether they are both divisible exactly by 3 and by 4; 
+    * otherwise the message “X and Y are not what you are looking for!” 
+    * must be displayed (where X and Y are the given numbers). 
+    * Moreover, individual error messages must be displayed when the user 
+    * enters any negative values or any floats.
+    */
+    
+    double x, y;
+    
+    x = Double.parseDouble(cin.nextLine());
+    y = Double.parseDouble(cin.nextLine());
+    
+    if (x < 0) {
+      System.out.println("Error: number must be positive!");
+    }
+    else if (x != (int) x) {
+      System.out.println("Error: number must be an integer!");
+    }
+    else if (y < 0) {
+      System.out.println("Error: number must be positive!");
+    }
+    else if (y != (int) y) {
+      System.out.println("Error: number must be an integer!");
+    }
+    else {
+      if (x % 3 == 0 && x % 4 == 0 && y % 3 == 0 && y % 4 == 0) {
+        System.out.println("Both numbers are divisible by 3 and by 4!");
+      }
+      else {
+        System.out.println(x + " and " + y + " are not what you are looking for!");
+      }
+    }
+    
+   
+   }
+}
