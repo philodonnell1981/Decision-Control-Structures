@@ -1,0 +1,39 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+   /*
+    * Design a flowchart and write the corresponding Java program 
+    * that prompts the user to enter an integer, and then displays 
+    * a message indicating whether this number is even; 
+    * it must display “Odd” otherwise. Moreover, individual error 
+    * messages must be displayed when the user enters a negative 
+    * value or a float.
+    */
+    
+    double x;
+    
+    x = Double.parseDouble(cin.nextLine());
+    
+    if (x < 0) {
+      System.out.println("Invalid Entry:  value must be positive");
+      }
+    else if (x != (int) x) {
+      System.out.println("Invalid Entry: value must be integer");
+    }
+    else if (x % 2 == 0) {
+      System.out.println("Even");
+    }
+    else {
+      System.out.println("Odd");
+      }
+    
+   
+   }
+}
