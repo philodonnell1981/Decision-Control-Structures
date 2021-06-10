@@ -1,0 +1,78 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+   /*
+    * Write a Java program that displays the following menu: 
+    * 1. Convert Kelvin to Fahrenheit 
+    * 2. Convert Fahrenheit to Kelvin 
+    * 3. Convert Fahrenheit to Celsius 
+    * 4. Convert Celsius to Fahrenheit 
+    * 
+    * It then prompts the user to enter a choice (of 1 to 4) and a temperature value. 
+    * It then calculates and displays the required value. 
+    * Moreover, individual error messages must be displayed when the user enters a choice other than 
+    * 1, 2, 3, or 4, or a temperature value lower than absolute zero[
+    */
+    
+    int choice;
+    double temp;
+    
+    System.out.println("1. Convert Kelvin to Fahrenheit");
+    System.out.println("2. Convert Fahrenheit to Kelvin");
+    System.out.println("3. Convert Fahrenheit to Celsius");
+    System.out.println("4. Convert Celsius to Fahrenheit");
+    
+    System.out.println("Enter a choice (of 1 to 4)");
+    choice = Integer.parseInt(cin.nextLine());
+    if (choice != 1 && choice != 2 && choice != 3 && choice != 4) {
+      System.out.println("Invalid Entry.  Must be 1, 2, 3 or 4");
+    }
+    else {
+      System.out.println("Enter a temperature value: ");
+      temp = Double.parseDouble(cin.nextLine());
+      switch (choice) {
+      case 1:
+        if (temp < 0) {
+          System.out.println("Error - entry must be a valid temperature above 0 Kelvin");
+        }
+        else {
+          System.out.println(temp * 1.8 - 459.67 + " Fahrenheit");
+        }
+        break;
+      case 2:
+        if (temp < -459.67) {
+          System.out.println("Error - entry must be a valid temperature about -459.67 Fahrenheit");
+        }
+        else {
+          System.out.println(temp + 459.67 / 1.8 + " Kelvin");
+        }
+        break;
+      case 3:
+        if (temp < -459.67) {
+          System.out.println("Error - entry must be a valid temperature about -459.67 Fahrenheit");
+        }
+        else {
+          System.out.println((temp - 32) * 1.8 + " Celsius");
+        }
+        break;
+      case 4:
+        if (temp < -273.15) {
+          System.out.println("Error - entry must be a valid temperature about -273.15 Celsius");
+        }
+        else {
+          System.out.println(temp * 9 / 5 + 32 + " Fahrenheit");
+        }
+        break;
+      }
+    }
+    
+   
+   }
+}
