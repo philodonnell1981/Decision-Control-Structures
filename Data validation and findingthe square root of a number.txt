@@ -1,0 +1,31 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+   /*
+    *  Write a Java program that prompts the user to enter a numeric value 
+    *  and then calculates and displays its square root. 
+    *  Moreover, an error message must be displayed when the user enters 
+    *  a negative value.
+    */
+    
+    double x;
+    
+    x = Double.parseDouble(cin.nextLine());
+    
+    if (x < 0) {
+      System.out.println("Error - value must be positive!");
+    }
+    else {
+      System.out.println("The square root of " + x + " is: " + Math.sqrt(x));
+    }
+    
+   
+   }
+}
