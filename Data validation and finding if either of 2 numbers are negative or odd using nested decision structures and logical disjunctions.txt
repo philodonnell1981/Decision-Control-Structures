@@ -1,0 +1,39 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+   /*
+    * Design a flowchart and write the corresponding Java program 
+    * that lets the user enter two integers and then displays a message 
+    * indicating whether at least one integer is odd; 
+    * otherwise, a message “Nothing special” is displayed. 
+    * Moreover, if the user enters negative values, 
+    * an error message must be displayed.
+    */
+    
+    int x, y;
+    
+    x = Integer.parseInt(cin.nextLine());
+    y = Integer.parseInt(cin.nextLine());
+    
+    if (x < 0 || y < 0) {
+      System.out.println("Error, both numbers must be positive");
+    }
+    else {
+      if (x % 2 == 1 || y % 2 == 1) {
+        System.out.println("At least one number is odd");
+      }
+      else {
+        System.out.println("Nothing special");
+      }
+    }
+    
+   
+   }
+}
