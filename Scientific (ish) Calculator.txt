@@ -1,0 +1,56 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+   /*
+    * Write a Java program that prompts the user to enter an integer, 
+    * the type of operation (+, –, *, /, DIV, MOD, POWER), and a second integer. 
+    * The program must execute the required operation and display the result.
+    */
+    
+    int x, y;
+    String op;
+    
+    System.out.print("Enter an integer: ");
+    x = Integer.parseInt(cin.nextLine());
+    System.out.print("+, –, *, /, DIV, MOD, POWER: ");
+    op = cin.nextLine().toUpperCase();
+    System.out.print("Enter an integer: ");
+    y = Integer.parseInt(cin.nextLine());
+    
+    switch (op) {
+    case "+":
+      System.out.println(x + y);
+      break;
+    case "-":
+      System.out.println(x - y);
+      break;
+    case "*":
+      System.out.println(x * y);
+      break;
+    case "/":
+      System.out.println(x / y);
+      break;
+    case "DIV":
+      System.out.println(x / (int) y);
+      break;
+    case "MOD":
+      System.out.println(x % y);
+      break;
+    case "POWER":
+      System.out.println(Math.pow(x, y));
+      break;
+      default:
+        System.out.println("Invalid Entry");
+    }
+    
+    
+   
+   }
+}
