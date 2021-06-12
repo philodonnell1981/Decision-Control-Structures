@@ -1,0 +1,61 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+   /* Write a Java program that prompts the user to enter the names and the ages of
+    * three people and then displays the names of the youngest person and the oldest person.
+    */
+   int age1, age2, age3, minAge, maxAge;
+   String name1, name2, name3, minName, maxName;
+   
+   
+   System.out.println("Enter the name of person number 1: ");
+   name1 = cin.nextLine();
+   System.out.println("Enter the age of person number 1: ");
+   age1 = Integer.parseInt(cin.nextLine());
+   
+   System.out.println("Enter the name of person number 2: ");
+   name2 = cin.nextLine();
+   System.out.println("Enter the age of person number 2: ");
+   age2 = Integer.parseInt(cin.nextLine());
+    
+   System.out.println("Enter the name of person number 3: ");
+   name3 = cin.nextLine();
+   System.out.println("Enter the age of person number 3: ");
+   age3 = Integer.parseInt(cin.nextLine());
+   
+   minAge = age1;
+   minName = name1;
+   maxAge = age3;
+   maxName = name3;
+   
+   if (age2 < minAge) {
+     minAge = age2;
+     minName = name2;
+   }
+   if (age3 < minAge) {
+     minAge = age3;
+     minName = name3;
+   }
+   if (age2 > maxAge) {
+     maxAge = age2;
+     maxName = name2;
+   }
+   if (age1 > maxAge) {
+     maxAge = age1;
+     maxName = name1;
+   }
+   
+   System.out.println(minName + " is the youngest and " + maxName + " is the oldest");
+   
+    
+    
+   
+   }
+}
