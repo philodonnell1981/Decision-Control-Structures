@@ -1,0 +1,42 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+   double x, y;
+   
+   x = Double.parseDouble(cin.nextLine());
+   
+   if (x <= -15 || x > 25) {
+     y = x - 1;
+     System.out.println(y);
+   }
+   else if (x <= -10) {
+     y = x / Math.sqrt(x + 30) + Math.pow(8 + x, 2) / (x + 1);
+     System.out.println(y);
+   }
+   else if (x <= 0) {
+     y = Math.abs(40 * x) / (x - 8);
+     System.out.println(y);
+     }
+   
+   else if (x == 9) {
+     System.out.println("Error - divisible by 0");
+     }
+   else if (x < 9) {
+     System.out.println("Error: Invalid square root");
+   }
+   else {
+     y = 3 * x / Math.sqrt(x - 9);
+     System.out.println(y);
+     } 
+    
+    
+   
+   }
+}
