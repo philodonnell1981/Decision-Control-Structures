@@ -1,0 +1,50 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+  /*
+   * Write a Java program that prompts the user to enter the 
+   * ages of three people and then finds and displays the age in the middle.
+   */
+    
+    int i, a1, a2, a3, middle, min, max;
+    
+
+      System.out.println("Enter the age of person number 1: ");
+      a1 = Integer.parseInt(cin.nextLine());
+      
+      System.out.println("Enter the age of person number 2: ");
+      a2 = Integer.parseInt(cin.nextLine());
+      
+      System.out.println("Enter the age of person number 3: ");
+      a3 = Integer.parseInt(cin.nextLine());
+      
+      min = a1;
+      max = a3;
+      
+      if (a2 < min) {
+        min = a2;
+      }
+      if (a3 < min) {
+        min = a3;
+      }
+      if (a2 > max) {
+        max = a2;
+      }
+      if (a1 > max) {
+        max = a1;
+      }
+      
+      middle = a1 + a2 + a3 - min - max;
+      System.out.println(middle);
+  
+    
+   
+   }
+}
