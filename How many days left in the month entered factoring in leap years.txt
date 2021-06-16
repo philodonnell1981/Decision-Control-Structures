@@ -1,0 +1,51 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+  /*
+   * Write a Java program that prompts the user to enter a day (1 – 31), 
+   * a month (1 – 12), and a year and then finds and displays how many days 
+   * are left until the end of that month. 
+   * The program must take into consideration the leap years. 
+   * In the case of a leap year, February has 29 instead of 28 days.
+   */
+    
+    int day, month, year, r;
+    
+    System.out.print("Enter a day (1 - 31): ");
+    day = Integer.parseInt(cin.nextLine());
+    
+    System.out.print("Enter a month (1 - 12): ");
+    month = Integer.parseInt(cin.nextLine());
+    
+    System.out.print("Enter a year: ");
+    year = Integer.parseInt(cin.nextLine());
+    
+    if (month == 2) {
+      if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        r = 29 - day;
+        System.out.println(r + " remaining days of the month");
+      }
+      else {
+        r = 28 - day;
+        System.out.println(r + " remaining days of the month");
+      }
+    }
+    else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+      r = 31 - day;
+      System.out.println(r + " remaining days of the month");
+    }
+    else {
+      r = 30 - day;
+      System.out.println(r + " remaining days of the month");
+    }
+    
+   
+   }
+}
