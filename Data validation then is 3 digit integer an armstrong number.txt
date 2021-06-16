@@ -1,0 +1,50 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+  /*
+   * A positive integer is called an Armstrong number when the sum of the 
+   * cubes of its digits is equal to the number itself. 
+   * The number 371 is such a number, since 3 cubed + 7 cubed + 1 cubed = 371. 
+   * Write a Java program that lets the user enter a three-digit integer and then 
+   * displays a message indicating whether or not the given number is an Armstrong one. 
+   * Moreover, individual error messages must be displayed when the user enters a float 
+   * or any number other than a three-digit one.
+   */
+    
+    double x;
+    int xInt, d1, d2, d3, r;
+    
+    x = Double.parseDouble(cin.nextLine());
+    
+    if (x != (int)x) {
+      System.out.println("Error: Input integer numbers only!");
+    }
+    else if (x < 100 || x > 999) {
+      System.out.println("Error: Input 3 digit numbers only!");
+    }
+    else {
+      xInt = (int) x;
+      d3 = xInt % 10;
+      r = xInt / (int) 10;
+      d2 = r % 10;
+      d1 = r / (int) 10;
+      
+      if (xInt == (Math.pow(d1, 3) + Math.pow(d2, 3) + Math.pow(d3, 3))) {
+        System.out.println(xInt + " is an Armstrong number");
+      }
+      else {
+        System.out.println(xInt + " is not an Armstrong number");
+      }
+    }
+    
+   
+   }
+}
+
