@@ -1,0 +1,58 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+  static final double VAT = 0.19;
+
+  public static void main(String[] args) {
+
+  /*
+   * In a supermarket, the discount that a customer receives based on the 
+   * before-tax amount of their order is presented in the following table. 
+   * Range       Discount
+   * < £50       0%
+   * £50 < £100  1%
+   * £100 < £200 2%
+   * >= £200     3%
+   * 
+   * Write a Java program that prompts the user to enter the 
+   * before-tax amount of his or her order and then calculates 
+   * and displays the discount amount that customers receive (if any). 
+   * A VAT (Value Added Tax) of 19% must be added in the end. 
+   * Moreover, an error message must be displayed when the user 
+   * enters a negative value.
+   */
+    
+    double preTaxAmount, total, discount;
+    
+    System.out.print("Enter the pre-tax amount of your order: ");
+    preTaxAmount = Double.parseDouble(cin.nextLine());
+    
+    if (preTaxAmount < 0) {
+      System.out.println("Error - please enter a positive value");
+    }
+    else {
+      if (preTaxAmount < 50) {
+        discount = 0;
+      }
+      else if (preTaxAmount < 100) {
+        discount = 1;
+      }
+      else if (preTaxAmount < 200) {
+        discount = 2;
+      }
+      else {
+        discount = 3;
+      }
+      discount = preTaxAmount * discount / 100;
+      total = (preTaxAmount - discount) + preTaxAmount * VAT; //
+      System.out.println("Discount given: £" + discount);
+      System.out.println("Total inc VAT: £" + total);
+    }
+    
+  
+ }
+}
