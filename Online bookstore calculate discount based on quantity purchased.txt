@@ -1,0 +1,74 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+  /*
+   * An online book store sells e-books for $ 10 each. 
+   * Quantity discounts are given according to the following table. 
+   * Quantity   Discount 
+   * 3-5        10% 
+   * 6-9        15% 
+   * 10-13      20% 
+   * 14-19      27% 
+   * 20 or more 30% 
+   * 
+   * Write a Java program that prompts the user to enter the total number of e-books 
+   * purchased and then displays the amount of discount (if any), 
+   * and the total amount of the purchase after the discount. 
+   * Assume that the user enters valid values.
+   */
+    
+    int q;
+    double percent, subTotal, discount;
+    
+    System.out.print("Enter the total number of e-books purchased: ");
+    q = Integer.parseInt(cin.nextLine());
+    
+    if (q < 3) {
+      System.out.println("Total to Pay: £" + (q * 10));
+    }
+    else if (q <= 5) {
+      percent = 0.1;
+      subTotal = 10 * q;
+      discount = subTotal * percent;
+      System.out.println("Discount applied: £" + discount);
+      System.out.println("Total Amount To Pay: " + (subTotal - discount));
+    }
+    else if (q <= 9) {
+      percent = 0.15;
+      subTotal = 10 * q;
+      discount = subTotal * percent;
+      System.out.println("Discount applied: £" + discount);
+      System.out.println("Total Amount To Pay: " + (subTotal - discount));
+    }
+    else if (q <= 13) {
+      percent = 0.20;
+      subTotal = 10 * q;
+      discount = subTotal * percent;
+      System.out.println("Discount applied: £" + discount);
+      System.out.println("Total Amount To Pay: " + (subTotal - discount));
+    }
+    else if (q <= 19) {
+      percent = 0.27;
+      subTotal = 10 * q;
+      discount = subTotal * percent;
+      System.out.println("Discount applied: £" + discount);
+      System.out.println("Total Amount To Pay: " + (subTotal - discount));
+    }   
+    else {
+      percent = 0.3;
+      subTotal = 10 * q;
+      discount = subTotal * percent;
+      System.out.println("Discount applied: £" + discount);
+      System.out.println("Total Amount To Pay: " + (subTotal - discount)); 
+    }
+  
+ }
+}
+
