@@ -1,0 +1,74 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+  /*
+   * The Body Mass Index (BMI) is often used to determine whether 
+   * an adult person is overweight or underweight for his or her height. 
+   * The formula used to calculate the BMI of an adult person is 
+   * Write a Java program that prompts the user to enter his or her age, 
+   * weight (in pounds) and height (in inches) 
+   * and then displays a description according to the following table.
+   * 
+   * Body Mass Index      Description 
+   * BMI < 15             Very severely underweight 
+   * 15.0 BMI < 16.0    Severely underweight 
+   * 16.0 BMI < 18.5    Underweight 
+   * 18.5 BMI < 25      Normal 
+   * 25.0 BMI < 30.0    Overweight 
+   * 30.0 BMI < 35.0    Severely overweight 
+   * 35.0 BMI           Very severely overweight
+   * 
+   * The message “Invalid age” must be displayed when the user enters an age less than 18.
+   */
+    
+    int age, w, h;
+    double bmi;
+    
+    System.out.print("Enter your age: ");
+    age = Integer.parseInt(cin.nextLine());
+    
+    if (age < 18) {
+      System.out.println("Invalid age");
+    }
+    else {
+      System.out.println("Enter your weight in lb: ");
+      w = Integer.parseInt(cin.nextLine());
+      System.out.println("Enter your height in inches: ");
+      h = Integer.parseInt(cin.nextLine());
+      
+      bmi = w * 703 / Math.pow(h, 2);
+      
+      if (bmi < 15) {
+        System.out.println("Very severely underweight");
+      }
+      else if (bmi < 16) {
+        System.out.println("Severely underweight");
+      }
+      else if (bmi < 18.5) {
+        System.out.println("Underweight");
+      }
+      else if (bmi < 25) {
+        System.out.println("Normal");
+      }
+      else if (bmi < 30) {
+        System.out.println("Overweight");
+      }
+      else if (bmi < 35) {
+        System.out.println("Severley Overweight");
+      }
+      else {
+        System.out.println("Very Severley Overweight");
+      }
+    }
+    
+  
+ }
+}
+
