@@ -1,0 +1,53 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+  static final int TAX = 10;
+
+  public static void main(String[] args) {
+
+  /*
+   * The LAV Water Company charges for subscribers' water consumption according to the following table 
+   * (monthly rates for domestic accounts). 
+   * Water Consumption (cubic feet)     USD per cubic foot 
+   * consumption <= 10                  $ 3 
+   * 11 consumption <= 20               $ 5 
+   * 21 consumption <= 35               $ 7 
+   * 36 consumption                     $ 9 
+   * Write a Java program that prompts the user to enter the total amount of water
+   * consumed (in cubic feet) and then calculates and displays the total amount to pay. 
+   * Please note that the rates are progressive. 
+   * Federal, state, and local taxes add a total of 10% to each bill. 
+   * Moreover, an error message must be displayed when the user enters a negative value.
+   */
+    
+    double c, preTx;
+    
+    System.out.println("Enter the amount of water consumed in cubic feet: ");
+    c = Double.parseDouble(cin.nextLine());
+    
+    if (c < 0) {
+      System.out.println("Invalid Entry");
+    }
+    else {
+      if (c <= 10) {
+        preTx = c * 3;
+      }
+      else if (c <= 20) {
+        preTx = 10 * 3 + (c - 11) * 5;
+      }
+      else if (c <= 35) {
+        preTx = 10 * 3 + (20 - 11) * 5 + (c - 21) * 7;
+      }
+      else {
+        preTx = 10 * 3 + (20 - 11) * 5 + (35 - 21) * 7 + (c - 36) * 9;
+      }
+      System.out.println("Total amount to pay: £" + (preTx + preTx * TAX / 100));
+    }
+    
+  
+ }
+}
