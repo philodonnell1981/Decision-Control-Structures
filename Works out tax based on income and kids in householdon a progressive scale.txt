@@ -1,0 +1,58 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+    /*
+     * Write a Java program that prompts the user to enter his or her taxable income 
+     * and the number of his or her children and then calculates the total tax to pay 
+     * according to the following table. However, total tax is reduced by 2% when the 
+     * user has at least one child. 
+     * Please note that the rates are progressive. 
+     * Taxable Income (USD)     Tax Rate 
+     * income <= 8000             10% 
+     * > 8000 income <= 30000     15% 
+     * > 30000 income <= 70000    25% 
+     * > 70000 income             30%
+     */
+    
+    double income, tax;
+    int kids;
+    
+    System.out.println("Enter your taxable income: ");
+    income = Double.parseDouble(cin.nextLine());
+    
+    System.out.println("Enter the number of children in your household: ");
+    kids = Integer.parseInt(cin.nextLine());
+    
+    if (income <= 8000) {
+      tax = income * 10 / 100;
+    }
+    else if (income <= 30000) {
+      tax = 8000 * 10 / 100 + (income - 8000) * 15 / 100;
+    }
+    else if (income <= 70000) {
+      tax = 8000 * 10 / 100 + (30000 - 8000) * 15 / 100 + (income - 30000) * 25 / 100;
+    }
+    else {
+      tax = 8000 * 10 / 100 + (30000 - 8000) * 15 / 100 + (70000 - 30000) * 25 / 100 + (income - 70000 * 30 / 100);
+    }
+    
+    if (kids >= 1) {
+      System.out.println("Total tax including Parent reduction of 2%: " + (tax * 0.98));
+    }
+    else {
+      System.out.println("Total tax: " + tax);
+
+    }
+    
+    
+    
+  
+ }
+}
