@@ -1,0 +1,88 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+    /*
+     * The Beaufort scale is an empirical measure that relates wind speed 
+     * to observed conditions on land or at sea. 
+     * Write a Java program that prompts the user to enter the wind speed 
+     * and then displays the corresponding Beaufort number and description 
+     * according to the following table. 
+     * An additional message “It's Fishing Day!!!” must be displayed when wind speed is 3 Beaufort or less. 
+     * Moreover, an error message must be displayed when the user enters a negative value. 
+     * Wind Speed (miles per hour)  Beaufort Number   Description 
+     * wind speed < 1               0                 Calm 
+     * 1 wind speed < 4             1                 Light air 
+     * 4 wind speed < 8             2                 Light breeze 
+     * 8 wind speed < 13            3                 Gentle breeze 
+     * 13 wind speed < 18           4                 Moderate breeze 
+     * 18 wind speed < 25           5                 Fresh breeze 
+     * 25 wind speed < 31           6                 Strong breeze 
+     * 31 wind speed < 39           7                 Moderate gale 
+     * 39 wind speed < 47           8                 Gale 
+     * 47 wind speed < 55           9                 Strong gale 
+     * 55 wind speed < 64           10                Storm 
+     * 64 wind speed < 74           11                Violent storm
+     * > 74 wind speed              12                Hurricane force
+     */
+    
+    int w;
+    
+    System.out.print("Enter the wind speed in mph: ");
+    w = Integer.parseInt(cin.nextLine());
+    
+    if (w < 13) {
+      if (w < 1) {
+        System.out.println("0 - Calm");
+      }
+      else if (w < 4) {
+        System.out.println("1 - Light air");
+      }
+      else if (w < 8) {
+        System.out.println("2 - Light breeze");
+      }
+      else {
+        System.out.println("3 - Gentle breeze");
+      }
+      System.out.println("It's fishing day!");
+    }
+    else if (w < 18) {
+      System.out.println("4 - Moderate breeze");
+    }
+    else if (w < 25) {
+      System.out.println("5 - Fresh breeze");
+    }
+    else if (w < 31) {
+      System.out.println("6 - Strong breeze");
+    }
+    else if (w < 39) {
+      System.out.println("7 - Moderate gale");
+    }
+    else if (w < 47) {
+      System.out.println("8 - Gale");
+    }
+    else if (w < 55) {
+      System.out.println("9 - Strong gale");
+    }
+    else if (w < 64) {
+      System.out.println("10 - Storm");
+    }
+    else if (w < 74) {
+      System.out.println("11 - Violent storm");
+    }
+    else{
+      System.out.println("12 - Hurricane force");
+    }
+    
+    
+    
+  
+ }
+}
+
